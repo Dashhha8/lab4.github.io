@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Регистрация</title>
+</head>
+
+<body>
+    <form class="registration">
+
+        <div class="form__header">
+            <h1>Создание аккаунта</h1>
+            <hr />
+        </div>
+
+        <div class="form__body">
+            <div class="form__col">
+
+                <div class="form__group-title">Личные данные пользователя</div>
+
+                <div class="form__group">
+                    <label for="last-name">Фамилия<span>*</span></label><br/>
+                    <input type="text" name="last-name" id="last-name" class="form__control"/>
+                </div>
+                
+                <div class="form__group">
+                    <label for="first-name">Имя<span>*</span></label><br/>
+                    <input type="text" name="first-name" id="first-name" class="form__control"/>
+                </div>
+
+                <div class="form__group">
+                    <label for="middle-name">Отчество<span>*</span></label><br />
+                    <input type="text" name="middle-name" id="middle-name" class="form__control"/>
+                </div>
+            
+                <div class="input-wrapperr">
+                    <label for="sex">Пол<span>*</span></label>
+                    <select name="sex" id="sex" class="input">
+                        <option value="">Не выбран</option>
+                        <option value="female">Женский</option>
+                        <option value="male">Мужской</option>               
+                    </select>
+                    <span class="warn-meassage"></span>
+                </div>
+
+                <div class="input-wrapperr">
+                    <label for="birth-date">Дата рождения<span>*</span></label>
+                    <input type="date" id="birth-date" name="birth-date" class="input" max="9999-12-31">
+                    <span class="warn-meassage"></span>
+                </div>
+                
+                <div class="input-wrapperr">
+                    <label for="birth-place">Место рождения</label>
+                    <select name="birth-place" id="birth-place" class="input">
+                        <option value="not-selected">Не выбрано</option>
+                        <option value="saratov">Саратов</option>
+                        <option value="moscow">Москва</option>
+                        <option value="sochi">Сочи</option>
+                        <option value="penza">Пенза</option>
+                        <option value="voronezh">Воронеж</option>
+                        <option value="tyumen">Тюмень</option>
+                        <option value="perm">Пермь</option>
+                        <option value="omsk">Омск</option>
+                        <option value="volgograd">Волгоград</option>
+                        <option value="samara">Самара</option>
+                        <option value="kazan">Казань</option>		
+                        <option value="sizran">Сызрань</option>			
+                        <option value="stavropol">Ставрополь</option>
+                        <option value="astrahan">Астрахань</option>				
+                    </select>
+                </div>
+                   
+                <div class="input-wrapper">
+                    <label for="photo">Фото профиля<span>*</span></label>
+                    <input type="file" id="photo" name="photo" class="input" accept=".jpg">
+                    <span class="warn-meassage"></span>
+                </div>
+
+                <div class="form__group-title">Контактная информация</div>
+
+                <div class="input-wrapper">
+                    <label for="address">Адрес проживания<span>*</span></label>
+                    <input type="text" id="address" name="address" class="input">
+                    <span class="warn-meassage"></span>
+                </div>
+
+                <div class="form__group">
+                    <label for="tel">Номер телефона</label><br/>
+                    <input type="tel" name="tel" id="tel" class="form__control" placeholder="+70000000000"/>
+                </div>
+
+                <div class="form__group">
+                    <label for="email">Элекронная почта</label><br/>
+                    <input type="email" id="email" class="form__control" placeholder="cssc@mail.ru"/>
+                </div>
+
+                <div class="form__group-title">Общая информация</div>
+                
+                <div class="input-wrapper">
+                    <label for="Nickname">Никнейм</label><br/>
+                    <input type="text" name="Nickname" id="Nickname" class="form__control"/>
+                </div>
+
+                <p>Занятость</p>
+                <div>
+                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                    <label for="contactChoice1">Школа</label>
+
+                    <input type="radio" id="contactChoice2" name="contact" value="phone">
+                    <label for="contactChoice2">Колледж/ВУЗ</label>
+
+                    <input type="radio" id="contactChoice3" name="contact" value="mail">
+                    <label for="contactChoice3">Работа</label>
+                </div>
+
+                <br/>
+
+                <div class="input-wrapperr">
+                    <label for="sex">Отношение к вредным привычкам</label>
+                    <select name="sex" id="sex" class="input">
+                        <option value="">Не выбрано</option>
+                        <option value="Sharply-negative">Резко негативное</option>
+                        <option value="negative">Негативное</option>
+                        <option value="Compromise">Компромиссное</option>
+                        <option value="Neutral">Нейтральное</option>
+                        <option value="Positive">Положительное</option>                    
+                    </select>
+                    <span class="warn-meassage"></span>
+                </div>
+
+                <br/>
+
+                <div class="input-wrapper">
+                    <div class="tooltip-parent">
+                        <label for="question">Кто Вам порекомендовал наш сайт?</label>
+                        <div class="tooltip">Чтобы выбрать несколько вариантов зажмите клавишу Ctrl</div>
+                    </div>
+                    
+                    <select name="question" id="question" class="input multiselect" multiple>
+                        <option value="1">Рекомендация знакомых</option>
+                        <option value="2">Реклама в интернете</option>
+                        <option value="3">из пресс и ТВ</option>
+                        <option value="4">Зашли на сайт случайно</option>
+                        <option value="5">Перешли по ссылке в соцсети</option>
+                        <option value="6">e-mail рассылка</option>
+                        <option value="7">Нет в списке</option>
+                    </select>
+                </div>
+
+                <br/>
+
+                <div class="form__group">
+                    <label for="experience">О себе</label><br />
+                    <textarea name="experience" id="experience" cols="30" rows="10"
+                        class="form__control form__control--grow">
+                    </textarea>
+                </div>
+
+                <br/>
+
+                <div class="form__row">
+                    <div class="input-wrapper-checkbox">
+                        <label for="personal-data-agreement"><span>*</span>Я даю свое согласие на обработку персональных данных</label>
+                        <input type="checkbox" id="personal-data-agreement" name="personal-data-agreement" class="checkbox">
+                        <span class="warn-meassage"></span>
+                    </div>
+                </div>
+                
+                <br/>
+
+                <div class="form__col  form__col--center"> 
+                    <button class="btn" id="clear">Очистить</button>               
+                    <button type="submit" class="form__submit"> Отправить</button>               
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
